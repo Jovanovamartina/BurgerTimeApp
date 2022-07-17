@@ -1,0 +1,25 @@
+﻿@using BurgerTimeApp.ViewModels.ViewModel.OrderViewModel
+@model OrderViewModel
+
+
+<div class="bg-dark text-white" style="max-width: 40rem; margin-left:10px; margin-bottom: 10px; padding:10px; border-radius: 10px">
+
+<h3>Name: @Model.FullName</h3>
+<h4>Adress: @Model.Address</h4>
+@if (@Model.IsDelievered)
+{
+    <h3 style="color:green"><i>DELIVERED</i></h3>
+}
+else
+{
+    <h3 style="color:red"><i>NOT DELIEVERED</i></h3>
+}
+<h5>Location: @Model.Location</h5>
+<h5>Burgers: </h5> 
+<ul>
+    @foreach(Burger burger in @Model.Burgers)
+    {
+        <li><i>@burger.Name</i></li>
+    }
+</ul>
+</div>

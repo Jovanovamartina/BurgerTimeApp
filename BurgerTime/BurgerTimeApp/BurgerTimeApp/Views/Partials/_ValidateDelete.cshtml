@@ -1,0 +1,9 @@
+﻿@using BurgerTimeApp.ViewModels.ViewModel.OrderViewModel
+@model OrderViewModel
+
+
+<form asp-action="Delete">
+	<p>Are you sure you  want to delete this item?</p>
+	<button type="submit" class="btn btn-primary">Yes</button>
+	<a asp-action="Index" class="btn btn-primary">No</a>
+</form>

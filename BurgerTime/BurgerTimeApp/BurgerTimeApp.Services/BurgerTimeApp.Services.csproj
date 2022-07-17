@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BurgerTimeApp.DataAccsess\BurgerTimeApp.DataAccsess.csproj" />
+    <ProjectReference Include="..\BurgerTimeApp.Domain\BurgerTimeApp.Domain.csproj" />
+    <ProjectReference Include="..\BurgerTimeApp.ViewModels\BurgerTimeApp.ViewModels.csproj" />
+  </ItemGroup>
+
+</Project>

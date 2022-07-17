@@ -1,0 +1,44 @@
+﻿@using BurgerTimeApp.ViewModels.ViewModel.OrderViewModel
+@model IEnumerable<OrderViewModel>
+
+@{
+    ViewData["Title"] = "View";
+}
+
+
+<button>
+    <a asp-action="CreateOrder" asp-controller="Order" > New Order </a>
+</button>
+<br/>
+<br/>
+<table class="table table-striped">
+    <thead>
+        <tr>
+             <th scope="col">#</th>
+             <th scope="col">Full Name</th>
+            <th scope="col">Location</th>
+      <th></th>
+     
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        
+             <tr>
+                
+                  <td>@item.Id</td>
+                  <td>@item.FullName</td>
+                  <td>@item.Address</td>
+                  <td>
+          
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-primary">Edit</a>
+                <a asp-action="Details" asp-controller="Order" asp-route-id="@item.Id" class="btn btn-warning">Details</a>
+               <a asp-action="Delete" asp-controller="Order" asp-route-id="@item.Id" class="btn btn-danger">Delete</a>
+
+              
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

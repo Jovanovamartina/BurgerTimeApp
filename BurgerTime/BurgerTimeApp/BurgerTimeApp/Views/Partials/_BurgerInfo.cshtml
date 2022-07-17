@@ -1,0 +1,9 @@
+﻿@using BurgerTimeApp.ViewModels.ViewModel.BurgerViewModel
+@model BurgerViewModel
+
+
+<div class="card" style="width: 12rem;">
+      <div class="card-body">
+    <a  asp-controller="Burger" asp-action="Details" asp-route-id="@Model.Id">  <img style="width: 150px; height: 150px;" src="@Model.Img" asp-append-version="true"> <h5 class="card-title"> @Model.Name </h5></a>
+  </div>
+</div>

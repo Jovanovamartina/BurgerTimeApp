@@ -1,0 +1,6 @@
+﻿@using BurgerTimeApp.ViewModels.ViewModel.OrderViewModel
+@model OrderViewModel
+
+
+<h1><label asp-for="@Model.Id" asp-controller="Order" asp-action="Details" asp-route-id="@Model.Id"></label>@Html.TextBoxFor(x => x.Id)</h1>
+<h1><label asp-for="@Model.FullName"></label>@Html.TextBoxFor(x => x.FullName)</h1>
